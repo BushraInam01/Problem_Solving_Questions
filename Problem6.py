@@ -1,0 +1,18 @@
+#Q6 — Check Prime Number
+def is_prime(number):
+    if number < 2:
+        return False
+
+    for i in range(2, int(number ** 0.5) + 1):
+        if number % i == 0:
+            return False
+
+    return True
+
+
+number = int(input("Enter a number: "))
+
+if is_prime(number):
+    print(f"{number} is a Prime Number")
+else:
+    print(f"{number} is Not a Prime Number")
